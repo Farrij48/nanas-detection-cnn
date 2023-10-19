@@ -23,7 +23,11 @@ def predict_image(filename):
 
 predict_image(os.path.join("testing", "nanasmatang1.jpeg"))
 predict_image(os.path.join("testing", "nanasmatang2.jpeg"))
+predict_image(os.path.join("testing", "nanasmatang3.jpeg"))
+predict_image(os.path.join("testing", "nanasmatang4.jpeg"))
 predict_image(os.path.join("testing", "nanasmentah1.jpeg"))
 predict_image(os.path.join("testing", "nanasmentah2.jpeg"))
+predict_image(os.path.join("testing", "nanasmentah3.jpeg"))
+predict_image(os.path.join("testing", "nanasmentah4.jpeg"))
 predict_image(os.path.join("testing", "pisang1.jpeg"))
 predict_image(os.path.join("testing", "tomat1.jpeg"))

@@ -4,6 +4,8 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, Dropout, Flatten, Dense
 from keras.optimizers import Adam
 from keras.preprocessing.image import ImageDataGenerator
+import matplotlib.pyplot as plt
+
 
 base_dir = "dataset"
 train_path = os.path.join(base_dir, "train")
@@ -70,3 +72,15 @@ model.fit(
 )
 
 model.save("model.h5")
+
+# model.save_weights("deneme.h5")
+# plt.figure(figsize=(6, 4))
+# plt.plot(history.history["loss"], label="loss")
+# plt.plot(history.history["val_loss"], label="validation_loss")
+# plt.legend()
+# plt.show()
+# plt.figure(figsize=(6, 4))
+# plt.plot(history.history["accuracy"], label="accuracy")
+# plt.plot(history.history["val_accuracy"], label="validation accuracy")
+# plt.legend()
+# plt.show()
