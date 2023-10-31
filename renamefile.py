@@ -1,7 +1,7 @@
 import os
 
 # Tentukan path folder
-folder_path = "dataset5/nanas_mentah/"
+folder_path = "dataset7/lainya/Starfruit"
 # Dapatkan daftar semua file dalam folder
 file_list = os.listdir(folder_path)
 
@@ -18,7 +18,7 @@ for file_name in sorted_files:
     extension = file_name_parts[1]
 
     # Bentuk nama file baru dengan format "file{nomor_urutan}{ekstensi}"
-    new_name = f"nanas_mentah{nomor_urutan}{extension}"
+    new_name = f"Starfruit{nomor_urutan}{extension}"
 
     # Dapatkan path lengkap dari file lama dan file baru
     old_path = os.path.join(folder_path, file_name)

@@ -25,7 +25,7 @@ if not os.path.exists(model_path):
 modelyolo = YOLO(model_path)  # load a custom model
 
 # Ambang batas deteksi
-threshold_live = 0.3
+threshold_live = 0.5
 
 
 def predict_model_yolo(image_data):
