@@ -7,7 +7,7 @@ from keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
 
-base_dir = "dataset7"
+base_dir = "dataset8"
 train_path = os.path.join(base_dir, "train")
 test_path = os.path.join(base_dir, "validation")
 
@@ -22,7 +22,7 @@ model.add(Dropout(0.50))
 model.add(Flatten())
 model.add(Dense(5000, activation="relu"))
 model.add(Dense(1000, activation="relu"))
-model.add(Dense(3, activation="softmax"))
+model.add(Dense(4, activation="softmax"))
 
 model.summary()
 
@@ -66,9 +66,9 @@ total_validation_samples = len(test_generator.filenames)
 model.fit(
     train_generator,
     steps_per_epoch=total_train_samples // batch_size,
-    epochs=20,
+    epochs=50,
     validation_data=test_generator,
     validation_steps=total_validation_samples // batch_size,
 )
 
-model.save("model4.h5")
+model.save("model8.h5")

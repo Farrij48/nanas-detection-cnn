@@ -12,12 +12,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Load model saat aplikasi Flask dimulai
-modelh5 = load_model("model4.h5")
+modelh5 = load_model("model5.h5")
 
 
 def predict_model_keras(image_data):
     # Lakukan prediksi menggunakan model
-    img = image.load_img(io.BytesIO(image_data), target_size=(100, 100))
+    img = image.load_img(io.BytesIO(image_data), target_size=(224, 224))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
     img_array /= 255.0
@@ -167,7 +167,7 @@ if __name__ == "__main__":
 # CORS(app)
 
 # # Load model saat aplikasi Flask dimulai
-# modelh5 = load_model("model4.h5")
+# modelh5 = load_model("model5.h5")
 
 # # Inisialisasi model YOLO dan model path
 # model_path = os.path.join(".", "runs", "detect", "train3", "weights", "best.pt")
