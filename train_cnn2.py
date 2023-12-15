@@ -12,7 +12,7 @@ train_path = os.path.join(base_dir, "train")
 test_path = os.path.join(base_dir, "validation")
 
 model = Sequential()
-model.add(Conv2D(128, (3, 3), activation="relu", input_shape=(100, 100, 3)))
+model.add(Conv2D(128, (3, 3), activation="relu", input_shape=(150, 150, 3)))
 model.add(MaxPooling2D())
 model.add(Conv2D(64, (3, 3), activation="relu"))
 model.add(MaxPooling2D())
@@ -46,7 +46,7 @@ test_datagen = ImageDataGenerator(rescale=1.0 / 255)
 batch_size = 32
 train_generator = train_datagen.flow_from_directory(
     train_path,
-    target_size=(100, 100),
+    target_size=(150, 150),
     batch_size=batch_size,
     color_mode="rgb",
     class_mode="categorical",
@@ -54,7 +54,7 @@ train_generator = train_datagen.flow_from_directory(
 
 test_generator = test_datagen.flow_from_directory(
     test_path,
-    target_size=(100, 100),
+    target_size=(150, 150),
     batch_size=batch_size,
     color_mode="rgb",
     class_mode="categorical",
@@ -66,9 +66,9 @@ total_validation_samples = len(test_generator.filenames)
 model.fit(
     train_generator,
     steps_per_epoch=total_train_samples // batch_size,
-    epochs=50,
+    epochs=30,
     validation_data=test_generator,
     validation_steps=total_validation_samples // batch_size,
 )
 
-model.save("model8.h5")
+model.save("model9.h5")

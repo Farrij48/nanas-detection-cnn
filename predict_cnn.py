@@ -19,9 +19,8 @@ def predict_image(filename):
     else:
         print("nanas_mentah")
 
-    # tampilkan gambar tanpa resize
-    img = plt.imread(filename)
-    plt.imshow(img)
+    # tampilkan gambar
+    plt.imshow(img[0])
     plt.show()
 
 
